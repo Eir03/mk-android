@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Основные цвета приложения -->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF4081</color>
+    
+    <!-- Цвета для заметок -->
+    <color name="noteBackground">#FFFFFF</color>
+    <color name="noteTitleColor">#212121</color>
+    <color name="noteContentColor">#757575</color>
+    <color name="noteDateColor">#9E9E9E</color>
+    
+    <!-- Цвета для кнопок -->
+    <color name="buttonTextColor">#2196F3</color>
+    <color name="deleteButtonColor">#F44336</color>
+    
+    <!-- Цвета для фона -->
+    <color name="backgroundColor">#F5F5F5</color>
+    <color name="dividerColor">#BDBDBD</color>
+    
+    <!-- Дополнительные цвета для стилизации -->
+    <color name="color1">#FFC107</color> <!-- Amber -->
+    <color name="color2">#4CAF50</color> <!-- Green -->
+    <color name="color3">#9C27B0</color> <!-- Purple -->
+    <color name="color4">#FF5722</color> <!-- Deep Orange -->
+    <color name="color5">#00BCD4</color> <!-- Cyan -->
+</resources>
