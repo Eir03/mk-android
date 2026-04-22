@@ -15,8 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +26,9 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnNot
     private Button buttonSettings;
     private Button buttonStatistics;
     private Button buttonGallery;
-    private Button buttonInfo;
     private Button buttonAdd;
+    private Button buttonSchedule;
+    private Button buttonTasks;
     private NoteAdapter adapter;
     private DatabaseHelper databaseHelper;
     private List<Note> noteList;
@@ -71,8 +70,9 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnNot
         buttonSettings = findViewById(R.id.button_settings);
         buttonStatistics = findViewById(R.id.button_statistics);
         buttonGallery = findViewById(R.id.button_gallery);
-        buttonInfo = findViewById(R.id.button_info);
         buttonAdd = findViewById(R.id.button_add);
+        buttonSchedule = findViewById(R.id.button_schedule);
+        buttonTasks = findViewById(R.id.button_tasks);
         emptyView = findViewById(R.id.empty_view);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -101,13 +101,18 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnNot
             startActivity(intent);
         });
 
-        buttonInfo.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+        buttonAdd.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NoteEditorActivity.class);
+            addNoteLauncher.launch(intent);
+        });
+
+        buttonSchedule.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ScheduleActivity.class);
             startActivity(intent);
         });
 
-        buttonAdd.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, NoteEditorActivity.class);
+        buttonTasks.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TasksActivity.class);
             startActivity(intent);
         });
     }
